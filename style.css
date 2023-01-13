@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    padding: 0 10%;
+    background-color: #F9F4E8;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+    margin-top: 40px;
+}
+.logo{
+    display: flex;
+}
+.logo img{
+    display: inline;
+    height: 40%;
+}
+.logo button{
+    display: flex;
+    height: fit-content;
+    margin-left: 10px;
+    padding:5px 8px;
+    background: linear-gradient(90deg,#EAB052,#EA5778);
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+.menu label,.menu input{
+    display: none;
+}
+.menu label{
+    line-height: 60px;
+}
+ul li{
+    display: inline;
+    padding: 5px 8px;
+}
+a{
+    color: #000;
+}
+.btns button:first-child{
+    background: transparent;
+    border: none;
+    padding: 15px;
+}
+.btns button:last-child{
+    background-color:#4977EA ;
+    color:#fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.btns button{
+    cursor: pointer;
+}
+#ham{
+    width: 25px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#ham div{
+    background-color: #000;
+    height: 20%;
+}
+main{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+.content h1{
+    font-size: 34pt;
+}
+.content p{
+    opacity: 0.7;
+    margin: 20px 0;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+form input[type="email"]{
+    background-color: #fff;
+    width: 65%;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 10px;
+
+}
+form input[type="email"]:focus{
+    outline: none;
+}
+form input[type="submit"]{
+    color: white;
+    background-color: #4977EA;
+    border: none;
+    border-radius: 5px;
+    width: 30%;
+    cursor: pointer;
+}
+.nospam{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+.nospam img{
+    margin-right: 10px;
+    width: 20px;
+}
+.model{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.model img{
+    position: absolute;
+    width: 50%;
+}
+.model img:first-child{
+    rotate: -45deg;
+}
+.model img:nth-child(2){
+    rotate: -30deg;
+}
+.model img:nth-child(3){
+    rotate: -15deg;
+}
+footer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+footer table td{
+    padding: 0 10px;
+}
+@media (max-width:768px) {
+    body{
+        padding: 0 50px;
+        
+    }
+    nav{
+        overflow-x: hidden;
+        margin: 0;
+        position: relative;
+        width: 100%;
+    }
+    .btns{
+        display: none;
+    }
+    .menu label{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 35%;
+    }
+    .menu ul{
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        width: 100%;
+        transition: ease-in-out 0.5s;
+        text-align: center;
+    }
+    #check:checked ~ ul{
+        right: 0;
+    }
+    a{
+        text-decoration: underline;
+    }
+    main{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    form input[type="email"]{
+        width: 40%;
+    }
+    form input[type="submit"]{
+        width: 20%;
+    }
+}
+@media (max-width:480px){
+    body{
+        padding: 0 20px;
+    }
+    main{
+        margin: 0;
+    }
+    .model{
+        height: 300px;
+    }
+    form{
+        flex-direction: column;
+        gap: 10px;
+    }
+    form input[type="email"]{
+        width: 100%;
+    }
+    form input[type="submit"]{
+        width: 100%;
+        height: 40px;
+    }
+    footer{
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 40px;
+    }
+    footer a{
+        text-decoration: none;
+    }
+}
+
+
+/* bleu #4977EA
+yellow #EAB052
+pink #EA5778 */
